@@ -354,6 +354,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Snip.cs" />
+    <Compile Include="Models\SnipContext.cs" />
+    <Compile Include="Models\SnipDatabaseInitialize.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
