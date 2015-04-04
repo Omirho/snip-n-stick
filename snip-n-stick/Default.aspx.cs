@@ -13,5 +13,10 @@ namespace snip_n_stick
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
