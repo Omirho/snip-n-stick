@@ -24,7 +24,8 @@ namespace snip_n_stick.Account
             var _db = new SnipContext();
             IQueryable<Snip> query = _db.Snips;
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            query = query.Where(p => p.SnipCreatedBy == manager.GetEmail(User.Identity.GetUserId()));
+            string s = manager.GetEmail(User.Identity.GetUserId());
+            query = query.Where(p => p.SnipCreatedBy == s);
             return query;
         }
     }
