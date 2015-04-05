@@ -5,3 +5,4 @@ snip-n-stick/App_Data/*.ldf
 #Debug Information
 snip-n-stick/obj/
 snip-n-stick/bin/
+snip-n-stick/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
