@@ -11,5 +11,14 @@ namespace snip_n_stick.Account {
     
     
     public partial class MySnips {
+        
+        /// <summary>
+        /// SnipList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListView SnipList;
     }
 }
