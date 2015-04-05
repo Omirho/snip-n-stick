@@ -10,29 +10,13 @@
         <br />
         Syntax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:DropDownList ID="DropDownList1" runat="server" Width="200px">
-            <asp:ListItem>C</asp:ListItem>
-            <asp:ListItem>C++</asp:ListItem>
-            <asp:ListItem>Java</asp:ListItem>
-            <asp:ListItem>python</asp:ListItem>
-            <asp:ListItem>Ruby</asp:ListItem>
-            <asp:ListItem>php</asp:ListItem>
         </asp:DropDownList>
         <br />
         Expiration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="DropDownList2" runat="server" Height="30px" Width="200px">
-            <asp:ListItem>2 Mintues</asp:ListItem>
-            <asp:ListItem>10 mintues</asp:ListItem>
-            <asp:ListItem>1 hour</asp:ListItem>
-            <asp:ListItem>1 day</asp:ListItem>
-            <asp:ListItem>1 week</asp:ListItem>
-            <asp:ListItem>1 month</asp:ListItem>
-            <asp:ListItem>Never</asp:ListItem>
         </asp:DropDownList>
         <br />
         Exposure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:DropDownList ID="DropDownList3" runat="server" Width="200px" Height="25px">
-            <asp:ListItem>public</asp:ListItem>
-            <asp:ListItem Value="protected">protected</asp:ListItem>
-            <asp:ListItem>private</asp:ListItem>
         </asp:DropDownList>
         <br />
         Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
