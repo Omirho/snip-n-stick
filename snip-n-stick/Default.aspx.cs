@@ -37,7 +37,7 @@ namespace snip_n_stick
             {
                 newsnip.SnipCreatedBy = "default@default.com";
             }
-            newsnip.SnipAccessType = 0;
+            newsnip.SnipAccessType = 2;
             newsnip.SnipAccessPass = "";
             newsnip.SnipContent = TextArea1.Text;
             _db.Snips.Add(newsnip);
