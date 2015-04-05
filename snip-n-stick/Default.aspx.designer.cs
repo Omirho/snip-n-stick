@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace snip_n_stick
-{
-
-
-    public partial class _Default
-    {
-
+namespace snip_n_stick {
+    
+    
+    public partial class _Default {
+        
         /// <summary>
         /// DropDownList1 control.
         /// </summary>
@@ -22,7 +20,7 @@ namespace snip_n_stick
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-
+        
         /// <summary>
         /// DropDownList2 control.
         /// </summary>
@@ -31,7 +29,7 @@ namespace snip_n_stick
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList2;
-
+        
         /// <summary>
         /// DropDownList3 control.
         /// </summary>
@@ -40,7 +38,7 @@ namespace snip_n_stick
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
-
+        
         /// <summary>
         /// TextBox1 control.
         /// </summary>
@@ -49,7 +47,7 @@ namespace snip_n_stick
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
-
+        
         /// <summary>
         /// Button1 control.
         /// </summary>

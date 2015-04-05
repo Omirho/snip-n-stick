@@ -40,8 +40,7 @@
         
         <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Submit" Width="193px" Height="37px" />
-        
+        <asp:Button ID="Button1" runat="server" class="btn btn-default" OnClick="Button1_Click" Text="Submit" Width="193px" Height="37px" /> 
     </div>
 
     <div class="row">

@@ -6,3 +6,6 @@ snip-n-stick/App_Data/*.ldf
 snip-n-stick/obj/
 snip-n-stick/bin/
 snip-n-stick/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+snip-n-stick/obj/Debug/snip-n-stick.dll
+snip-n-stick/bin/snip-n-stick.dll
+snip-n-stick/bin/snip-n-stick.dll
