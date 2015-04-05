@@ -27,7 +27,7 @@ namespace snip_n_stick
             int id = Codec.Decode(snipid);
             IQueryable<Snip> query = _db.Snips;
             query = query.Where(p => p.SnipID == id);
-            if(query != null)
+            if(query != null && query.Count() > 0)
             {
                 if (query.First().SnipExpirationTime < DateTime.Now)
                     query = null;

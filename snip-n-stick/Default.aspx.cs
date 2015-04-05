@@ -15,11 +15,14 @@ namespace snip_n_stick
 {
     public partial class _Default : Page
     {
-        public static List<ListItem> langitems = new List<ListItem>();
-        public static List<ListItem> timeitems = new List<ListItem>();
-        public static List<ListItem> accessitems = new List<ListItem>();
+        public List<ListItem> langitems;
+        public List<ListItem> timeitems;
+        public List<ListItem> accessitems;
         protected void Page_Load(object sender, EventArgs e)
         {
+            langitems = new List<ListItem>();
+            timeitems = new List<ListItem>();
+            accessitems = new List<ListItem>();
             langitems.Add(new ListItem("Text"));
             langitems.Add(new ListItem("C"));
             langitems.Add(new ListItem("C++"));
@@ -33,7 +36,7 @@ namespace snip_n_stick
             langitems.Add(new ListItem("HTML"));
             langitems.Add(new ListItem("PHP"));
             langitems.Add(new ListItem("CoffeeScipt"));
-            timeitems.Add(new ListItem("10 minutes",(new TimeSpan(0,10,0)).ToString()));
+            timeitems.Add(new ListItem("10 minutes", (new TimeSpan(0, 10, 0)).ToString()));
             timeitems.Add(new ListItem("1 hour", (new TimeSpan(1, 0, 0)).ToString()));
             timeitems.Add(new ListItem("1 day", (new TimeSpan(1, 0, 0, 0)).ToString()));
             timeitems.Add(new ListItem("1 week", (new TimeSpan(7, 0, 0, 0)).ToString()));
@@ -43,7 +46,7 @@ namespace snip_n_stick
             accessitems.Add(new ListItem("Public"));
             accessitems.Add(new ListItem("Protected"));
             accessitems.Add(new ListItem("Private"));
-            if(!IsPostBack)
+            if (DropDownList1.Items.Count == 0)
             {
                 DropDownList1.Items.AddRange(langitems.ToArray());
                 DropDownList2.Items.AddRange(timeitems.ToArray());
@@ -61,7 +64,7 @@ namespace snip_n_stick
                 newsnip.SnipTitle = TextBox1.Text;
             newsnip.SnipLanguage = langitems[DropDownList1.SelectedIndex].Text;
             newsnip.SnipCreatedTime = DateTime.Now;
-            if(DropDownList2.SelectedIndex == 6)
+            if (DropDownList2.SelectedIndex == 6)
                 newsnip.SnipExpirationTime = DateTime.MaxValue;
             else
             {
