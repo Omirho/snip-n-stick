@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="Welcome" validateRequest="false" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="snip_n_stick._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
     <div class="jumbotron">
         <h2>Snip-N-Stick</h2>     
         <asp:TextBox id="TextArea1" runat="server" class="form-control" style="resize:none" Columns="500" Rows="20" TextMode="MultiLine"></asp:TextBox><br />
@@ -72,5 +71,28 @@
             </p>
         </div>
     </div>
+    <script type ="text/javascript" >
+        document.getElementById("<%= TextArea1.ClientID %>").addEventListener('keydown', function (e) {
+            if (e.keyCode === 9) { // tab was pressed
+                // get caret position/selection
+                var start = this.selectionStart;
+                var end = this.selectionEnd;
 
+                var target = e.target;
+                var value = target.value;
+
+                // set textarea value to: text before caret + tab + text after caret
+                target.value = value.substring(0, start)
+                            + "\t"
+                            + value.substring(end);
+
+                // put caret at right position again (add one for the tab)
+                this.selectionStart = this.selectionEnd = start + 1;
+
+                // prevent the focus lose
+                e.preventDefault();
+            }
+        }, false);
+
+        </script>
 </asp:Content>
