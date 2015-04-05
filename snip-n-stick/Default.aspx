@@ -6,7 +6,7 @@
         <h2>Snip-N-Stick</h2>
         
         <br />
-        <textarea id="TextArea1" name="S1"></textarea><br />
+        <asp:TextBox id="TextArea1" runat="server" Columns="500" Rows="50" TextMode="MultiLine"></asp:TextBox><br />
         <br />
         Syntax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:DropDownList ID="DropDownList1" runat="server" Width="200px">
