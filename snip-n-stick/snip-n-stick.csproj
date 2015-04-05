@@ -362,6 +362,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Codec.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Snip.cs" />
     <Compile Include="Models\SnipContext.cs" />
