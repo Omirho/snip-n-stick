@@ -1,7 +1,7 @@
 # SQL Server files
-*/App_Data/*.mdf
-*/App_Data/*.ldf
+snip-n-stick/App_Data/*.mdf
+snip-n-stick/App_Data/*.ldf
 
 #Debug Information
-*/obj/*
-*/bin/*
+snip-n-stick/obj/
+snip-n-stick/bin/
