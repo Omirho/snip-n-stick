@@ -3,35 +3,12 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="jumbotron">
-<<<<<<< HEAD
-        <h2>Snip-N-Stick</h2>
-        
-        <br />
-        <asp:TextBox id="TextArea1" runat="server" Columns="500" Rows="50" TextMode="MultiLine"></asp:TextBox><br />
-        <br />
-        Syntax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:DropDownList ID="DropDownList1" runat="server" Width="200px">
-        </asp:DropDownList>
-        <br />
-        Expiration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:DropDownList ID="DropDownList2" runat="server" Height="30px" Width="200px">
-        </asp:DropDownList>
-        <br />
-        Exposure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:DropDownList ID="DropDownList3" runat="server" Width="200px" Height="25px">
-        </asp:DropDownList>
-=======
         <h2>Snip-N-Stick</h2>     
-        <asp:TextBox id="TextArea1" runat="server" class="form-control" Columns="500" Rows="20" TextMode="MultiLine"></asp:TextBox><br />
+        <asp:TextBox id="TextArea1" runat="server" class="form-control" style="resize:none" Columns="500" Rows="20" TextMode="MultiLine"></asp:TextBox><br />
         <div class="form-group">
             <asp:Label runat="server" CssClass="col-md-2 control-label">Syntax</asp:Label>
             <div class="col-md-10">
                  <asp:DropDownList ID="DropDownList1" runat="server" class="form-control">
-                    <asp:ListItem>C</asp:ListItem>
-                    <asp:ListItem>C++</asp:ListItem>
-                    <asp:ListItem>Java</asp:ListItem>
-                    <asp:ListItem>python</asp:ListItem>
-                    <asp:ListItem>Ruby</asp:ListItem>
-                    <asp:ListItem>php</asp:ListItem>
                 </asp:DropDownList>
             </div>
         </div>
@@ -40,13 +17,6 @@
             <asp:Label runat="server" CssClass="col-md-2 control-label">Duration</asp:Label>
             <div class="col-md-10">
                  <asp:DropDownList ID="DropDownList2" runat="server" class="form-control">
-                    <asp:ListItem>2 Mintues</asp:ListItem>
-                    <asp:ListItem>10 mintues</asp:ListItem>
-                    <asp:ListItem>1 hour</asp:ListItem>
-                    <asp:ListItem>1 day</asp:ListItem>
-                    <asp:ListItem>1 week</asp:ListItem>
-                    <asp:ListItem>1 month</asp:ListItem>
-                    <asp:ListItem>Never</asp:ListItem>
                 </asp:DropDownList>
             </div>
         </div>
@@ -55,13 +25,9 @@
             <asp:Label runat="server" CssClass="col-md-2 control-label">Exposure</asp:Label>
             <div class="col-md-10">
                  <asp:DropDownList ID="DropDownList3" runat="server" class="form-control">
-                    <asp:ListItem>public</asp:ListItem>
-                    <asp:ListItem Value="protected">protected</asp:ListItem>
-                    <asp:ListItem>private</asp:ListItem>
                 </asp:DropDownList>
             </div>
         </div>
->>>>>>> origin/master
         <br />
         <div class="form-group">
             <asp:Label runat="server" CssClass="col-md-2 control-label">Title</asp:Label>

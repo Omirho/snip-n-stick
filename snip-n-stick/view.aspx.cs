@@ -29,7 +29,9 @@ namespace snip_n_stick
             query = query.Where(p => p.SnipID == id);
             if(query.Count() > 0)
             {
-                if(query.First().SnipAccessType == 2)
+                if (query.First().SnipExpirationTime < DateTime.Now)
+                    query = null;
+                if(query != null && query.First().SnipAccessType == 2)
                 {
                     if (User.Identity.IsAuthenticated)
                     {
@@ -40,6 +42,8 @@ namespace snip_n_stick
                     else
                         query = null;
                 }
+                if (query != null && query.First().SnipCreatedBy == "default@default.com")
+                    query.First().SnipCreatedBy = "Guest";
             }
             return query;
         }

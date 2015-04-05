@@ -15,7 +15,7 @@ namespace snip_n_stick.Models
         [Required, StringLength(100), Display(Name = "Title")]
         public string SnipTitle { get; set; }
 
-        [Required, StringLength(100), Display(Name = "Language"), DefaultValue("None")]
+        [Required, StringLength(100), Display(Name = "Language")]
         public string SnipLanguage { get; set; }
 
         [Required, Display(Name = "CreatedTime"), DataType(DataType.DateTime)]
@@ -24,10 +24,10 @@ namespace snip_n_stick.Models
         [Required, Display(Name = "ExpirationTime"), DataType(DataType.DateTime)]
         public DateTime SnipExpirationTime { get; set; }
 
-        [Required, StringLength(100), Display(Name = "CreatedBy"), DataType(DataType.EmailAddress), DefaultValue("default@default.com")]
+        [Required, StringLength(100), Display(Name = "CreatedBy"), DataType(DataType.EmailAddress)]
         public string SnipCreatedBy { get; set; }
 
-        [Required, Display(Name = "AccessType"), DefaultValue(0)]
+        [Required, Display(Name = "AccessType")]
         public int SnipAccessType { get; set; }
 
         [StringLength(100), Display(Name = "AccessPass"), DataType(DataType.Password)]
