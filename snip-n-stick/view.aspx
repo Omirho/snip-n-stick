@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="view.aspx.cs" Inherits="snip_n_stick.WebForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <link href="/Content/highlight/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    <link href="/Content/highlight/styles/shThemeCore.css" rel="stylesheet" type="text/css" />
+    <script src="/Content/highlight/scripts/shCore.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/Content/highlight/scripts/shBrushCpp.js"></script>
+    <script src="/Content/highlight/scripts/shAutoloader.js" type="text/javascript"></script>
+    <script>SyntaxHighlighter.all();</script>
     <asp:FormView ID="form" runat="server" ItemType="snip_n_stick.Models.Snip" SelectMethod="GetSnip">
         <EmptyDataTemplate> 
                <p>No data was returned.</p>
@@ -21,15 +24,9 @@
                 <%#: Item.SnipCreatedBy %> &nbsp;&nbsp;&nbsp; <%#: Item.SnipCreatedTime %>
             </TextBox>
             <br />
-            <br /><div style ="
-    float: left;
-    width: 75em;
-    padding: 1em;
-    background: none repeat scroll 0% 0% #500;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #400 #700 #700 #400;
-"><pre><code><%#: Item.SnipContent %></code></pre></div>
+            <br />
+            <script type="syntaxhighlighter" class="brush: cpp">
+                <![CDATA[<%#: Item.SnipContent %>]]></script>
             <br />
             <br />
         </ItemTemplate>

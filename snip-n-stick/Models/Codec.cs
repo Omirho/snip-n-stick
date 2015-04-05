@@ -31,7 +31,7 @@ namespace snip_n_stick.Models
         public static int Decode(string s)
         {
             var i = 0;
-
+            if (s == null) return -1;
             foreach (var c in s)
             {
                 i = (i * Base) + Alphabet.IndexOf(c);
