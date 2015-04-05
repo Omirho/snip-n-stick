@@ -19,12 +19,15 @@ namespace snip_n_stick.Models
                 {
                     SnipID = 1,
                     SnipTitle = "test",
-                    SnipLanguage = "none",
+                    SnipLanguage = "C++",
                     SnipCreatedTime = DateTime.Now,
                     SnipExpirationTime = DateTime.MaxValue,
                     SnipCreatedBy = "default@default.com",
                     SnipAccessType = 0,
-                    SnipContent = "test"
+                    SnipContent = "#include <iostream>\n"
+                                + "int main()\n"
+                                + "{\n\treturn 0;\n}"
+          
                 }
             };
             return snips;
