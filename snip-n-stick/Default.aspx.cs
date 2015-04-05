@@ -76,9 +76,8 @@ namespace snip_n_stick
             {
                 newsnip.SnipCreatedBy = "default@default.com";
             }
-
             newsnip.SnipAccessType = DropDownList3.SelectedIndex;
-            newsnip.SnipAccessPass = "";
+            newsnip.SnipAccessPass = TextBox2.Text;
             newsnip.SnipContent = TextArea1.Text;
             _db.Snips.Add(newsnip);
             _db.SaveChanges();

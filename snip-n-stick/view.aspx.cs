@@ -27,7 +27,7 @@ namespace snip_n_stick
             int id = Codec.Decode(snipid);
             IQueryable<Snip> query = _db.Snips;
             query = query.Where(p => p.SnipID == id);
-            if(query.Count() > 0)
+            if(query != null)
             {
                 if (query.First().SnipExpirationTime < DateTime.Now)
                     query = null;
@@ -41,6 +41,13 @@ namespace snip_n_stick
                     }
                     else
                         query = null;
+                }
+                else if(query != null && query.First().SnipAccessType == 1)
+                {
+                    if(Session[snipid] == null)
+                    {
+                        Response.Redirect("ViewProtected?id="+snipid);
+                    }
                 }
                 if (query != null && query.First().SnipCreatedBy == "default@default.com")
                     query.First().SnipCreatedBy = "Guest";

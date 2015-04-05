@@ -30,6 +30,11 @@
         </div>
         <br />
         <div class="form-group">
+            <asp:Label runat="server" CssClass="col-md-2 control-label">Access Password</asp:Label>
+            <asp:TextBox ID="TextBox2" runat="server" class="form-control" ></asp:TextBox>
+        </div>
+        <br />
+        <div class="form-group">
             <asp:Label runat="server" CssClass="col-md-2 control-label">Title</asp:Label>
             <asp:TextBox ID="TextBox1" runat="server" class="form-control" ></asp:TextBox>
         </div>
