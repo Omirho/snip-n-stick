@@ -18,7 +18,7 @@ namespace snip_n_stick
         public IQueryable<Snip> GetSnip([RouteData] string snipid)
         {
             var _db = new snip_n_stick.Models.SnipContext();
-            int id = decode(snipid);
+            int id = Decode(snipid);
             IQueryable<Snip> query = _db.Snips;
             query = query.Where(p => p.SnipID == id);
             return query;
