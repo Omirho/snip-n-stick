@@ -21,12 +21,19 @@ namespace snip_n_stick.Account
 
         public IQueryable<Snip> GetMySnips()
         {
-            var _db = new SnipContext();
-            IQueryable<Snip> query = _db.Snips;
-            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            string s = manager.GetEmail(User.Identity.GetUserId());
-            query = query.Where(p => p.SnipCreatedBy == s);
-            return query;
+            try
+            {
+                var _db = new SnipContext();
+                IQueryable<Snip> query = _db.Snips;
+                var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                string s = manager.GetEmail(User.Identity.GetUserId());
+                query = query.Where(p => p.SnipCreatedBy == s);
+                return query;
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }
