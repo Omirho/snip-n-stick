@@ -21,6 +21,18 @@ namespace snip_n_stick
 
             //Initializing the database
             Database.SetInitializer(new SnipDatabaseInitialize());
+
+            //Setting Routes
+            RegisterCustomRoutes(RouteTable.Routes);
+        }
+
+        void RegisterCustomRoutes(RouteCollection routes)
+        {
+            routes.MapPageRoute(
+                "ViewByID",
+                "{snipid}",
+                "~/view.aspx"
+                );
         }
     }
 }
