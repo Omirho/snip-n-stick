@@ -117,7 +117,7 @@ namespace snip_n_stick
                         _db.SaveChanges();
                         string s = Codec.Encode(newsnip.SnipID);
                         TextBox1.Text = s;
-                        Response.Redirect(GetRouteUrl("ViewByID", new { snipid = s }));
+                        Response.Redirect(GetRouteUrl("ViewByID", new { snipid = s }),false);
                     }
                 }
             }
