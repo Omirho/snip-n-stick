@@ -15,7 +15,7 @@ namespace snip_n_stick
         {
             try
             {
-                var a = RouteData.Values["id"];
+                var a = Request.QueryString["id"];
                 if (a == null)
                     Response.Redirect("/");
                 else

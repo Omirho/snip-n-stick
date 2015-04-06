@@ -53,7 +53,8 @@ namespace snip_n_stick
                     {
                         if (Session[snipid] == null)
                         {
-                            Response.Redirect(GetRouteUrl("ViewProtected", new { id = snipid }));
+                            //Response.Redirect(GetRouteUrl("ViewProtected", new { id = snipid }));
+                            Response.Redirect("ViewProtected.aspx?id=" + snipid);
                         }
                     }
                     if (query != null && query.First().SnipCreatedBy == "default@default.com")
