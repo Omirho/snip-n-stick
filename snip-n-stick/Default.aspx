@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Welcome" validateRequest="false" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="snip_n_stick._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="jumbotron">
+    <div class="jumbotron" style ="box-shadow: 0px 0px 10px 5px #CCC">
         <h2>Snip-N-Stick</h2>
         <asp:Label ID="err" runat="server" />  
         <asp:TextBox id="TextArea1" runat="server" class="form-control" style="resize:none" Columns="500" Rows="20" TextMode="MultiLine"></asp:TextBox><br />
@@ -31,12 +31,12 @@
         <br />
         <div class="form-group">
             <asp:Label runat="server" CssClass="col-md-2 control-label">Password</asp:Label>
-            <asp:TextBox ID="TextBox2" runat="server" style="Margin-left:14px" Cssclass="form-control col-md-10 control-label" ></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" style="Margin-left:14px" Cssclass="form-control col-md-10 control-label" autocomplete="off"></asp:TextBox>
         </div>
         <br />
         <div class="form-group">
             <asp:Label runat="server" CssClass="col-md-2 control-label">Title </asp:Label>
-            <asp:TextBox ID="TextBox1" runat="server" style="Margin-left:14px" Cssclass="form-control col-md-10 control-label"  ></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" style="Margin-left:14px" Cssclass="form-control col-md-10 control-label" autocomplete="off" ></asp:TextBox>
         </div>
         <br />
         <asp:Button ID="Button1" runat="server" class="btn btn-default" OnClick="Button1_Click" Text="Submit" Width="193px" Height="37px" /> 
