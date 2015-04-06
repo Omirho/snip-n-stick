@@ -17,7 +17,7 @@ namespace snip_n_stick.Models
             var snips = new List<Snip> {
                 new Snip
                 {
-                    SnipID = "test",
+                    SnipID = 1,
                     SnipTitle = "test",
                     SnipLanguage = "none",
                     SnipCreatedTime = DateTime.Now,

@@ -10,7 +10,7 @@ namespace snip_n_stick.Models
     public class Snip
     {
         [ScaffoldColumn(false)]
-        public string SnipID { get; set; }
+        public int SnipID { get; set; }
 
         [Required, StringLength(100), Display(Name = "Title")]
         public string SnipTitle { get; set; }
