@@ -13,6 +13,15 @@ namespace snip_n_stick {
     public partial class _Default {
         
         /// <summary>
+        /// err control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label err;
+        
+        /// <summary>
         /// TextArea1 control.
         /// </summary>
         /// <remarks>

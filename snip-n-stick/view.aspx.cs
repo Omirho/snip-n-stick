@@ -23,36 +23,48 @@ namespace snip_n_stick
 
         public IQueryable<Snip> GetSnip([RouteData] string snipid)
         {
-            var _db = new snip_n_stick.Models.SnipContext();
-            int id = Codec.Decode(snipid);
-            IQueryable<Snip> query = _db.Snips;
-            query = query.Where(p => p.SnipID == id);
-            if(query != null && query.Count() > 0)
+            try
             {
-                if (query.First().SnipExpirationTime < DateTime.Now)
-                    query = null;
-                if(query != null && query.First().SnipAccessType == 2)
+                var _db = new snip_n_stick.Models.SnipContext();
+                int id = Codec.Decode(snipid);
+                IQueryable<Snip> query = _db.Snips;
+                query = query.Where(p => p.SnipID == id);
+                if (query != null && query.Count() > 0)
                 {
-                    if (User.Identity.IsAuthenticated)
+                    if (query.First().SnipExpirationTime < DateTime.Now)
                     {
-                        var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
-                        if (manager.GetEmail(User.Identity.GetUserId()) != query.First().SnipCreatedBy)
+                        _db.Snips.Remove(query.First());
+                        _db.SaveChanges();
+                        query = null;
+                    }
+
+                    if (query != null && query.First().SnipAccessType == 2)
+                    {
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                            if (manager.GetEmail(User.Identity.GetUserId()) != query.First().SnipCreatedBy)
+                                query = null;
+                        }
+                        else
                             query = null;
                     }
-                    else
-                        query = null;
-                }
-                else if(query != null && query.First().SnipAccessType == 1)
-                {
-                    if(Session[snipid] == null)
+                    else if (query != null && query.First().SnipAccessType == 1)
                     {
-                        Response.Redirect("ViewProtected?id="+snipid);
+                        if (Session[snipid] == null)
+                        {
+                            Response.Redirect(GetRouteUrl("ViewProtected", new { id = snipid }));
+                        }
                     }
+                    if (query != null && query.First().SnipCreatedBy == "default@default.com")
+                        query.First().SnipCreatedBy = "Guest";
                 }
-                if (query != null && query.First().SnipCreatedBy == "default@default.com")
-                    query.First().SnipCreatedBy = "Guest";
+                return query;
             }
-            return query;
+            catch
+            {
+                return null;
+            }
         }
 
     }

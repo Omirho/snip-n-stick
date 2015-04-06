@@ -9,7 +9,7 @@ li.L5, li.L6, li.L7, li.L8
 </style>
     <asp:FormView ID="form" runat="server" ItemType="snip_n_stick.Models.Snip" SelectMethod="GetSnip" Width="100%">
         <EmptyDataTemplate> 
-               <p>No data was returned.</p>
+               <p>The requested Snip has expired!</p>
         </EmptyDataTemplate>
         <ItemTemplate>
             <br />

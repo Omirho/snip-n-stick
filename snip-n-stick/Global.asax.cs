@@ -33,6 +33,11 @@ namespace snip_n_stick
                 "{snipid}",
                 "~/view.aspx"
                 );
+            routes.MapPageRoute(
+                "ViewProtected",
+                "ViewProtected/{id}",
+                "~/ViewProtected.aspx"
+                );
         }
     }
 }

@@ -2,7 +2,8 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div class="jumbotron">
-        <h2>Snip-N-Stick</h2>     
+        <h2>Snip-N-Stick</h2>
+        <asp:Label ID="err" runat="server" />  
         <asp:TextBox id="TextArea1" runat="server" class="form-control" style="resize:none" Columns="500" Rows="20" TextMode="MultiLine"></asp:TextBox><br />
         <div class="form-group">
             <asp:Label runat="server" CssClass="col-md-2 control-label">Syntax</asp:Label>
