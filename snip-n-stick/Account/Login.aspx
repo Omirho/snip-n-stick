@@ -31,17 +31,17 @@
                             <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />
                         </div>
                     </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
+                    <div class="form-group" style="height:4px">
+                        <div class="col-md-offset-2 col-md-10" style="height:4px">
                             <div class="checkbox">
-                                <asp:CheckBox runat="server" ID="RememberMe" />
-                                <asp:Label runat="server" AssociatedControlID="RememberMe">Remember me?</asp:Label>
+                                <asp:CheckBox runat="server" ID="RememberMe" Visible="False" />
+                                <asp:Label runat="server" AssociatedControlID="RememberMe"></asp:Label>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group" >
                         <div class="col-md-offset-2 col-md-10">
-                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" />
+                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" Height="35px" Width="280px"/>
                         </div>
                     </div>
                 </div>

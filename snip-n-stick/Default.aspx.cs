@@ -43,9 +43,12 @@ namespace snip_n_stick
             accessitems.Add(new ListItem("Public"));
             accessitems.Add(new ListItem("Protected"));
             accessitems.Add(new ListItem("Private"));
-            DropDownList1.Items.AddRange(langitems.ToArray());
-            DropDownList2.Items.AddRange(timeitems.ToArray());
-            DropDownList3.Items.AddRange(accessitems.ToArray());
+            if(!IsPostBack)
+            {
+                DropDownList1.Items.AddRange(langitems.ToArray());
+                DropDownList2.Items.AddRange(timeitems.ToArray());
+                DropDownList3.Items.AddRange(accessitems.ToArray());
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)

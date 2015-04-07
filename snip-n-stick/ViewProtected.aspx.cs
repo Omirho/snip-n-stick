@@ -14,6 +14,8 @@ namespace snip_n_stick
         protected void Page_Load(object sender, EventArgs e)
         {
             id = Request.QueryString["id"];
+            if (id == null)
+                Response.Redirect("/");
         }
 
         protected void Auth(object sender, EventArgs e)
