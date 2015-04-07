@@ -19,7 +19,7 @@
             </LayoutTemplate>
                 <ItemTemplate>                   
                     <tr>
-                        <td><a href="https://www.ggogle.com"><%#: Item.SnipTitle %></a></td>
+                        <td><a href="<%#: GetRouteUrl("ViewByID", new { snipid = snip_n_stick.Models.Codec.Encode(Item.SnipID) }) %>"><%#: Item.SnipTitle %></a></td>
                         <td><%#: Item.SnipCreatedTime %></td>		
                         <td><%#: Item.SnipExpirationTime %></td>
                         <td><%#: Item.SnipLanguage %></td>
