@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace snip_n_stick.Models
 {
-    public class SnipDatabaseInitialize : CreateDatabaseIfNotExists<SnipContext>
+    public class SnipDatabaseInitialize : DropCreateDatabaseIfModelChanges<SnipContext>
     {
         protected override void Seed(SnipContext context)
         {
